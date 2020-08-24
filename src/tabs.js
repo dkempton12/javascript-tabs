@@ -16,6 +16,14 @@ function handleTabButtonClick(event) {
   tabPanels.forEach((panel) => {
     panel.hidden = true;
   });
+
+  // grab reference to the button id
+  const { id } = event.target;
+  // Find tabpanel where its aria-labelledby attribute is equal to the corresponding button id
+  const findTabPanel = tabPanels.find(
+    (panel) => panel.getAttribute('aria-labelledby') === id
+  );
+  findTabPanel.hidden = false;
 }
 
 tabButtons.forEach((button) =>
