@@ -27,6 +27,16 @@ div[role='tablist'] .tabButton {
   border: none;
   border-radius: 4px 4px 0 0;
   background: #fff;
+  cursor: pointer;
+}
+
+div[role='tablist'] .tabButton:focus {
+  outline: 0;
+}
+
+div[role='tablist'] .tabButton[aria-selected='false'] {
+  background: mediumseagreen;
+  color: #fff;
 }
 
 div[role='tabpanel'] {
