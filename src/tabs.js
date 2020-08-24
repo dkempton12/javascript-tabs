@@ -11,6 +11,11 @@ function handleTabButtonClick(event) {
   });
   // set targeted button as selected
   event.target.setAttribute('aria-selected', true);
+
+  // hide all tabpanels
+  tabPanels.forEach((panel) => {
+    panel.hidden = true;
+  });
 }
 
 tabButtons.forEach((button) =>
