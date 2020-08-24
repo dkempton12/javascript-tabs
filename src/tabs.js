@@ -5,7 +5,12 @@ const tabPanels = Array.from(tabs.querySelectorAll('[role="tabpanel"]'));
 console.log(tabs, tabButtons, tabPanels);
 
 function handleTabButtonClick(event) {
-  console.log(event.target);
+  // unselect all buttons
+  tabButtons.forEach((button) => {
+    button.setAttribute('aria-selected', false);
+  });
+  // set currentTarget button as selected
+  event.currentTarget.setAttribute('aria-selected', true);
 }
 
 tabButtons.forEach((button) =>
