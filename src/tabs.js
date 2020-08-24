@@ -9,8 +9,8 @@ function handleTabButtonClick(event) {
   tabButtons.forEach((button) => {
     button.setAttribute('aria-selected', false);
   });
-  // set currentTarget button as selected
-  event.currentTarget.setAttribute('aria-selected', true);
+  // set targeted button as selected
+  event.target.setAttribute('aria-selected', true);
 }
 
 tabButtons.forEach((button) =>
